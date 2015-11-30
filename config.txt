@@ -1,0 +1,4 @@
+Threads = 5
+Domains = edu.pt; lala.pt; olx.pt; asdasdasdasd.pt; fb.com;
+LocalDomain = so.local
+NamedPipeEstatisticas = statistics
