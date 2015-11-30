@@ -3,7 +3,7 @@ DNS Server using 3 processes and a thread pool. Whitelisted domains in text file
 
 - Compilation: $ make 
 
-- Usage: $ ./main <port>
+- Usage: $ ./main port
 
 - Testing: $ dig @127.0.0.1 -p53000 www.domain.com
 
