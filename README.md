@@ -1,5 +1,5 @@
 # [C] Simple DNS Server
-DNS Server using 3 processes and a thread pool. Whitelisted domains in text files.
+DNS Server using 3 processes and Multithreading (dynamic thread pool). Whitelisted domains and server configuration in text files.
 
 - Compilation: $ make 
 
