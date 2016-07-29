@@ -17,5 +17,7 @@ Threads treat external requests using dig aswell. Local requests are processed f
 
 Programmed in C and written functions and comments in Portuguese.
 
+ISSUES: Multithreading not working as intended.
+
 #
 Shared under MIT License.
