@@ -25,15 +25,14 @@ ww8.so.local 192.168.1.8
 ```
 
 * `config.txt`: 
-Provides number of threads, whitelisted external domains, local domain, and a named pipe name. In order to change
-both type of domains while running the server you may send a signal SIGUSR1 to the cfg_process, which PID will be shown occasionaly
-as some stats are printed time to time.
-Threads treat external requests using dig aswell. Local requests are processed faster.
+Provides thread pool size, whitelisted external Domains addresses, LocalDomain address, and a statistics named pipe name. 
+Live Reloading: It's possible to update both domain types list, while running the server, by sending a SIGUSR1 signal to the cfg_process PID (which is shown occasionally on the server cli window or by locating it on your system) after updating and saving the file.
+Threads handle external requests using dig aswell but local requests are processed faster.
 
 Example:
 ```
 Threads = 5
-Domains = edu.pt; lala.pt; olx.pt; asdasdasdasd.pt; fb.com;
+Domains = edu.pt; lala.pt; olx.pt; google.com; fb.com;
 LocalDomain = so.local
 NamedPipeEstatisticas = statistics
 ```
@@ -41,21 +40,16 @@ NamedPipeEstatisticas = statistics
 
 # Running
 
+* Compilation: `$ make`
+
+* Usage: `$ ./main <port>`
+
+* Testing: `$ dig @127.0.0.1 -p53000 www.domain.com`
+
+dig usage: -p stands for port and @ it's the server address (always localhost in this project).
 
 
-- Compilation: `$ make`
-
-- Usage: `$ ./main <port>`
-
-- Testing: `$ dig @127.0.0.1 -p53000 www.domain.com`
-
-dig: -p stands for port and @ it's the server address (local machine in this case).
-
-
-
-
-
-# ISSUES: 
+# Issues
 * Multithreading not working as intended.
 
 #
