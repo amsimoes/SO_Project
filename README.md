@@ -1,11 +1,11 @@
 # [C] Simple DNS Server
 DNS Server using 3 processes and Multithreading (dynamic thread pool). Whitelisted domains and server configuration in text files.
 
-- Compilation: $ make 
+- Compilation: `$ make`
 
-- Usage: $ ./main port
+- Usage: `$ ./main <port>`
 
-- Testing: $ dig @127.0.0.1 -p53000 www.domain.com
+- Testing: `$ dig @127.0.0.1 -p53000 www.domain.com`
 
 dig: -p stands for port and @ it's the server address (local machine in this case).
 
